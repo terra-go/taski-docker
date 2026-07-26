@@ -1,7 +1,11 @@
+"""Database models for the API application."""
+
 from django.db import models
 
 
 class Task(models.Model):
+    """Task entity with title, description and completion status."""
+
     title = models.CharField(verbose_name='Заголовок', max_length=120)
     description = models.TextField()
     completed = models.BooleanField(default=False)
